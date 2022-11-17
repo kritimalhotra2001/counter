@@ -4,6 +4,12 @@ import { useState } from "react";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [names, setNames] = useState([
+    "varun",
+    "reet",
+    "prabhleen",
+    "shashwat",
+  ]);
 
   const increment = () => {
     setCount(count + 1);
@@ -19,6 +25,9 @@ function App() {
       >
         decrement
       </button>
+      {names.map((item, index) => {
+        return <p>{item + "meow" + index}</p>;
+      })}
     </div>
   );
 }
